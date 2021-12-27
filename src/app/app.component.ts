@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'restaurant-app';
+  isMenuCollapsed = true;
+  images = ['../assets/slider-1.jpg','../assets/slider-2.jpg','../assets/slider-3.jpg'];
 }

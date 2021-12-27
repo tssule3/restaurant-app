@@ -1,0 +1,28 @@
+.container{
+    opacity: 0.3;
+}
+.scaleImage{
+    width: 100px;
+}
+.stackImage{
+  background-size: cover; 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+.responsive-img{
+  width: 100%;
+  height: auto;
+}
+
+
+@media only screen and (max-width: 990px) {
+  ul{
+    align-items: center;
+  }
+  .scaleImage{
+    width: 50px;
+  }
+}
