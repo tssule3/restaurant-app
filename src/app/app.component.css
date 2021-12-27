@@ -11,10 +11,13 @@
   top: 0px;
   z-index: -1;
 }
+.carousel-caption{
+  color: black;
+}
 
 .responsive-img{
   width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
 
@@ -24,5 +27,8 @@
   }
   .scaleImage{
     width: 50px;
+  }
+  .responsive-img{
+   height: 500px;
   }
 }
