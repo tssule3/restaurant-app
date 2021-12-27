@@ -1,0 +1,24 @@
+.navbar-inner {
+    background:transparent;
+  }
+  .style-link{
+      font-size:18px;
+  }
+  .scaleImage{
+      width: 100px;
+  }
+  .stackImage{
+    background-size: cover; 
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+  }
+@media only screen and (max-width: 990px) {
+    ul{
+      align-items: center;
+    }
+    .scaleImage{
+      width: 50px;
+    }
+  }

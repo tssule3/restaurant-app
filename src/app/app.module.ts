@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
+import { MainCarouselComponent } from './main-carousel/main-carousel.component';
+import { HeaderNavbarComponent } from './header-navbar/header-navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    MainCarouselComponent,
+    HeaderNavbarComponent
   ],
   imports: [
     BrowserModule,
