@@ -24,7 +24,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.6) 100%) repeat 0 0;
-    z-index: 1;
+    /* z-index: 1; */
     }
   .wp-caption-text {
     display: block;
@@ -40,9 +40,17 @@
     box-sizing: border-box;
     }
   
-  
+  .showCarousel{
+    z-index: 1;
+  }
+  .hideCarousel{
+    z-index: -1;
+  }
   
 @media only screen and (max-width: 990px) {
+    .main-container{
+      z-index: -1;
+    }
     .responsive-img{
      height: 500px;
     }
