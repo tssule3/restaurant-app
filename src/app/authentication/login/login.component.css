@@ -98,6 +98,6 @@ span a {
 @media only screen and (max-width: 990px) {
 	.form-box {
 		width: auto;
-        top: 27px;
+        top: 0px;
 	}
   }
