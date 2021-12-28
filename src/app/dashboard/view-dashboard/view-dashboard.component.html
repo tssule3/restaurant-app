@@ -1,11 +1,11 @@
 <div class="form-box">
     <div class="header-text">Dashboard</div>
     <div class="flex-container">
-        <div routerLink="cook">Cook</div>
-        <div routerLink="waiter">Waiter</div>
-        <div routerLink="orders">Orders</div>  
-        <div routerLink="inventory">Inventory</div>
-        <div routerLink="pickup">Pickup</div>
-        <div routerLink="parking">Parking</div>  
+        <div (click)="navigateWithState('cook')">Cook</div>
+        <div (click)="navigateWithState('waiter')">Waiter</div>
+        <div (click)="navigateWithState('orders')">Orders</div>  
+        <div (click)="navigateWithState('inventory')">Inventory</div>
+        <div (click)="navigateWithState('pickup')">Pickup</div>
+        <div (click)="navigateWithState('parking')">Parking</div>  
 </div>
 </div>
