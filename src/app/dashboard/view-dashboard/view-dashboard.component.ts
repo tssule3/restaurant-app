@@ -11,75 +11,12 @@ export class ViewDashboardComponent implements OnInit {
 isUserLoggedIn = false;
 navigationObject = {};
 rowLabelDataSource = [
-  {'type': 'cook',
-  rowOneLabel : '0',
-  rowTwoLabel : '1',
-  rowThreeLabel : '2',
-  rowFourLabel : '3',
-  rowFiveLabel : '4',
-  rowSixLabel : '5',
-  rowSevenLabel : '6',
-  rowEightLabel : '7',
-  rowNineLabel : '8',
-  rowTenLabel : '9'},
-  {'type': 'waiter',
-    rowOneLabel : '0',
-  rowTwoLabel : '1',
-  rowThreeLabel : '2',
-  rowFourLabel : '3',
-  rowFiveLabel : '4',
-  rowSixLabel : '5',
-  rowSevenLabel : '6',
-  rowEightLabel : '7',
-  rowNineLabel : '8',
-  rowTenLabel : '9'},
-  {'type': 'orders',
-    rowOneLabel : '0',
-  rowTwoLabel : '1',
-  rowThreeLabel : '2',
-  rowFourLabel : '3',
-  rowFiveLabel : '4',
-  rowSixLabel : '5',
-  rowSevenLabel : '6',
-  rowEightLabel : '7',
-  rowNineLabel : '8',
-  rowTenLabel : '9'},
-
-  {'type': 'inventory',
-    rowOneLabel : 'Sr no.',
-  rowTwoLabel : 'Item',
-  rowThreeLabel : 'Available-Quantity',
-  rowFourLabel : 'Cost',
-  rowFiveLabel : 'Total Amount',
-  rowSixLabel : 'Requested By',
-  rowSevenLabel : 'Requested Quantity',
-  rowEightLabel : 'Approve/Reject',
-  rowNineLabel : '',
-  rowTenLabel : ''},
-
-  {'type': 'pickup',
-    rowOneLabel : '0',
-  rowTwoLabel : '1',
-  rowThreeLabel : '2',
-  rowFourLabel : '3',
-  rowFiveLabel : '4',
-  rowSixLabel : '5',
-  rowSevenLabel : '6',
-  rowEightLabel : '7',
-  rowNineLabel : '8',
-  rowTenLabel : '9'},
-
-  {'type': 'parking',
-    rowOneLabel : '0',
-  rowTwoLabel : '1',
-  rowThreeLabel : '2',
-  rowFourLabel : '3',
-  rowFiveLabel : '4',
-  rowSixLabel : '5',
-  rowSevenLabel : '6',
-  rowEightLabel : '7',
-  rowNineLabel : '8',
-  rowTenLabel : '9'}
+  {'type': 'cook'},
+  {'type': 'waiter'},
+  {'type': 'orders'},
+  {'type': 'inventory'},
+  {'type': 'pickup'},
+  {'type': 'parking'}
 ];
   constructor(private authService: AuthServiceService, private router: Router) { }
 
@@ -100,6 +37,8 @@ rowLabelDataSource = [
     });
   }
   navigateWithState(param: any) {
-    this.router.navigateByUrl(`dashboard/${param}`, { state: { data: this.sendExtraParams(param) } });
+    const paramsData = this.sendExtraParams(param);
+    sessionStorage.setItem('paramsData', JSON.stringify(paramsData));
+    this.router.navigateByUrl(`dashboard/${param}`, { state: { data: paramsData } });
   }
 }
