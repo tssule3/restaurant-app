@@ -6,20 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory.component.css']
 })
 export class InventoryComponent implements OnInit {
-inventoryData =   {'type': 'inventory',
-rowOneLabel : 'Sr no.',
-rowTwoLabel : 'Item',
-rowThreeLabel : 'Available-Quantity',
-rowFourLabel : 'Cost',
-rowFiveLabel : 'Total Amount',
-rowSixLabel : 'Requested By',
-rowSevenLabel : 'Requested Quantity',
-rowEightLabel : 'Approve/Reject',
-rowNineLabel : '',
-rowTenLabel : ''};
+  rowOneLabel = 'Sr no.';
+  rowTwoLabel = 'Order In Progress';
+  rowThreeLabel = 'Order In Queue';
+  rowFourLabel = 'Update Orders';
+  rowFiveLabel = 'Request New Item';
+  rowSixLabel = 'Update Food Quantity';
+  rowSevenLabel = 'Date';
+  rowEightLabel = 'Employee Management';
+  showDate = true;
+  rowLabelData: any;
+  containerText: any;
+
   constructor() { }
 
   ngOnInit(): void {
+    const containerText = JSON.parse(sessionStorage.getItem('paramsData') || '');
+    this.setRowLabel(this.rowLabelData || containerText[0]);
+  }
+
+  setRowLabel(containerText: any) {
+    this.containerText = containerText?.type?.toUpperCase();
   }
 
 }

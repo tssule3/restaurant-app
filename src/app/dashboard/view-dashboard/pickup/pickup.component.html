@@ -1,3 +1,61 @@
-<app-container [rowOneLabel]="pickupData.rowOneLabel" [rowTwoLabel]="pickupData.rowTwoLabel" [rowThreeLabel]="pickupData.rowThreeLabel"
-[rowFourLabel]="pickupData.rowFourLabel" [rowFiveLabel]="pickupData.rowFiveLabel" [rowSixLabel]="pickupData.rowSixLabel" [rowSevenLabel]="pickupData.rowSevenLabel"
-[rowEightLabel]="pickupData.rowEightLabel"></app-container>
+<!-- <app-container [rowOneLabel]="cookData.rowOneLabel" [rowTwoLabel]="cookData.rowTwoLabel" [rowThreeLabel]="cookData.rowThreeLabel"
+[rowFourLabel]="cookData.rowFourLabel" [rowFiveLabel]="cookData.rowFiveLabel" [rowSixLabel]="cookData.rowSixLabel" [rowSevenLabel]="cookData.rowSevenLabel"
+[rowEightLabel]="cookData.rowEightLabel" [showDate]="true" [rowDataArray]="createDynamicElement('','')"  ></app-container> -->
+
+
+<div class="form-box">
+    <div class="header-text">{{containerText}}</div>
+    <div *ngIf="showDate" >
+      <span style="font-size: large; color: white;">Filter By Date</span> &nbsp;
+      <select name="cars" id="cars" autofocus> 
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div> <br>
+    <div style="overflow-x:auto;">
+        <table>
+          <tr>
+            <th>{{rowOneLabel}}</th>
+            <th>{{rowTwoLabel}}</th>
+            <th>{{rowThreeLabel}}</th>
+            <th>{{rowFourLabel}}</th>
+            <th>{{rowFiveLabel}}</th>
+            <th>{{rowSixLabel}}</th>
+            <th>{{rowSevenLabel}}</th>
+            <th>{{rowEightLabel}}</th>
+          </tr>
+          <tr>
+            <td>Jill</td>
+            <td id="rowD"></td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+          </tr>
+          <tr>
+            <td>Adam</td>
+            <td>Johnson</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+          </tr>
+        </table>
+      </div>
+</div>
